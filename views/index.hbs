@@ -1,1 +1,17 @@
-<h2>Account Login</h2>
+<div class="container py-5">
+  <form action="/" method="POST">
+    <div class="card mx-auto m-5 rounded" style="width: 50%;">
+      <h2 class="text-center m-4">Account Login</h2>
+      <div class="form-group mb-2 mx-4 mt-4">
+        <input type="email" class="form-control" name="email" placeholder="Email">
+      </div>
+      <div class="form-group mb-2 mx-4 mt-4">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary mx-auto m-4" style="width:30%">Sign in</button>
+      {{#if fault}}
+      <p class="text-danger mx-auto">{{ fault }}</p>
+      {{/if}}
+    </div>
+  </form>
+</div>
